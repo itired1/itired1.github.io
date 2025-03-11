@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4ff; /* Светло-голубой фон */
+    color: #333;
+}
+
+.header {
+    background: #6a1b9a; /* Фиолетовый фон */
+    color: white;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap; /* Обеспечивает перенос элементов на маленьких экранах */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin: 0 10px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.phone-link {
+    color: #ffffff;
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+}
+
+.intro, .calculator, .services-list, .office-cleaning, .about-company, .reviews, .order-cleaning {
+    opacity: 0; /* Начальное скрытие для анимации */
+    transform: translateY(20px); /* Сдвиг вниз для анимации */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Переход для анимации */
+}
+
+.intro.animate, .calculator.animate, .services-list.animate, .office-cleaning.animate, .about-company.animate, .reviews.animate, .order-cleaning.animate {
+    opacity: 1; /* Показать элемент */
+    transform: translateY(0); /* Вернуть элемент на место */
+}
+
+.intro {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.service-link {
+    display: inline-block;
+    background: #6a1b9a; /* Фиолетовая кнопка */
+    color: white;
+    padding: 15px 25px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.service-link:hover {
+    background: #4a0072; /* Более темный фиолетовый при наведении */
+}
+
+.calculator {
+    padding: 40px 20px;
+    background: #e6f0ff; /* Светлый фон для калькулятора */
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6a1b9a; /* Фиолетовый цвет результата */
+    text-align: center;
+}
+
+.services-list {
+    padding: 40px 20px;
+    text-align: center;
+    background: #e6f0ff; /* Светлый фон для услуг */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Отступ между карточками услуг */
+    flex-wrap: wrap; /* Обеспечивает перенос на маленьких экранах */
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    width: 200px; /* Фиксированная ширина карт */
+}
+
+.service-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.office-cleaning {
+    padding: 40px 20px;
+    background: #e6f0ff; /* Светлый фон для уборки офиса */
+    display: flex;
+    flex-wrap: wrap; /* Обеспечивает перенос на маленьких экранах */
+}
+
+.office-cleaning-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.description {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px;
+    flex: 1;
+    min-width: 300px; /* Обеспечивает минимальную ширину */
+}
+
+.image {
+    flex: 1;
+}
+
+.image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.order-button {
+    background: #6a1b9a; /* Фиолетовая кнопка */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.order-button:hover {
+    background: #4a0072; /* Более темный фиолетовый при наведении */
+}
+
+.about-company {
+    padding: 40px 20px;
+    background: #e6f0ff; /* Светлый фон для "О компании" */
+    text-align: center;
+}
+
+.more-info {
+    display: inline-block;
+    background: #6a1b9a; /* Фиолетовая кнопка */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.more-info:hover {
+    background: #4a0072; /* Более темный фиолетовый при наведении */
+}
+
+.reviews {
+    padding: 40px 20px;
+    background: #e6f0ff; /* Светлый фон для отзывов */
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Отступ между карточками отзывов */
+}
+
+.review-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px; /* Ширина карточек отзывов */
+}
+
+.order-cleaning {
+    padding: 40px 20px;
+    background: #e6f0ff; /* Светлый фон для заказа уборки */
+    text-align: center;
+}
+
+.order-cleaning form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.order-cleaning label {
+    margin-top: 10px;
+}
+
+.order-cleaning input, .order-cleaning select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background: #6a1b9a; /* Фиолетовая кнопка */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: #4a0072; /* Более темный фиолетовый при наведении */
+}
+
+.privacy-notice {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #6a1b9a; /* Фиолетовый фон подвала */
+    color: white;
+}
+
+.social-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; /* Центрирование кнопок */
+}
+
+.social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px; /* Отступ между кнопками */
+    transition: background 0.3s, color 0.3s;
+}
+
+.social-button img {
+    width: 100%;
+    height: auto; /* Поддержка адаптивности изображений */
+}
+
+.social-button:hover {
+    background-color: #e6e6e6; /* Цвет кнопок при наведении */
+    color: #ffdd57; /* Цвет текста при наведении */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Переключение в столбик на мобильных экранах */
+        align-items: center; /* Центрирование элементов */
+    }
+
+    .services-container {
+        flex-direction: column; /* Вертикальное расположение карточек услуг */
+        align-items: center; /* Центрирование карточек услуг */
+    }
+
+    .service-card {
+        width: auto; /* Уменьшение ширины карточек на мобильных */
+        margin-bottom: 20px; /* Отступ между карточками */
+    }
+
+    .office-cleaning-content {
+        flex-direction: column; /* Переключение в столбик на мобильных экранах */
+    }
+
+    .description {
+        margin-right: 0; /* Убираем правый отступ */
+    }
+}
